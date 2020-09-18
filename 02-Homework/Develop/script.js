@@ -31,7 +31,7 @@ var charSet4 = ["!@#$%^&*()"]
 
 var result = ''
 
-var charSelect = []
+var charSelect = ['']
 
 var passLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters")
 
@@ -43,12 +43,6 @@ var numericChoice = confirm("Would you like numeric characters? OK for YES, Canc
 
 var specialChoice = confirm("Would you like special characters? OK for YES, Cancel for NO")
 
-if (charSet1 == true) {
-    charSelect.push(charSet1)
-  if (charSet2 == true) {
-      charSelect.push(charSet2)
-      } if (charSet3 == true) {
-          charSelect.push(charSet3)
-        } if (charSet4 == true) {
-          charSelect.push(charSet4) }
+if ((upperChoice = true) && (lowerChoice = true) && (numericChoice = true) && (specialChoice = true)) {
+  charSelect = charSet1.concat(charSet2, charSet3, charSet4)
 }
