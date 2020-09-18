@@ -44,5 +44,5 @@ var numericChoice = confirm("Would you like numeric characters? OK for YES, Canc
 var specialChoice = confirm("Would you like special characters? OK for YES, Cancel for NO")
 
 if ((upperChoice = true) && (lowerChoice = true) && (numericChoice = true) && (specialChoice = true)) {
-  charSelect = charSet1.concat(charSet2, charSet3, charSet4)
+  charSelect = charSet1 + charSet2 + charSet3 + charSet4
 }
