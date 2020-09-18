@@ -6,16 +6,49 @@
 
 
 // Assignment Code
-var generateBtn = document.querySelector("#generate");
+//var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-function writePassword() {
-  var password = generatePassword();
-  var passwordText = document.querySelector("#password");
+//function writePassword() {
+  //var password = generatePassword();
+  //var passwordText = document.querySelector("#password");
 
-  passwordText.value = password;
+  //passwordText.value = password;
 
-}
+//}
 
 // Add event listener to generate button
-generateBtn.addEventListener("click", writePassword);
+// generateBtn.addEventListener("click", writePassword);
+
+
+var charSet1 = ["abcdefghijklmnopqrstuvwxyz"]
+
+var charSet2 = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+
+var charSet3 = ["1234567890"]
+
+var charSet4 = ["!@#$%^&*()"]
+
+var result = ''
+
+var charSelect = []
+
+var passLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters")
+
+var upperChoice = confirm("Would you like upper case characters? OK for YES, Cancel for NO")
+
+var lowerChoice = confirm("Would you like lower case characters? OK for YES, Cancel for NO")
+
+var numericChoice = confirm("Would you like numeric characters? OK for YES, Cancel for NO")
+
+var specialChoice = confirm("Would you like special characters? OK for YES, Cancel for NO")
+
+if (charSet1 == true) {
+    charSelect.push(charSet1)
+  if (charSet2 == true) {
+      charSelect.push(charSet2)
+      } if (charSet3 == true) {
+          charSelect.push(charSet3)
+        } if (charSet4 == true) {
+          charSelect.push(charSet4) }
+}
