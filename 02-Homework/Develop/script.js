@@ -20,45 +20,41 @@ var passwordText = document.querySelector("#password");
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-
-// Creation of variables
-var charSet1 = ["abcdefghijklmnopqrstuvwxyz"]
-
-var charSet2 = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
-
-var charSet3 = ["1234567890"]
-
-var charSet4 = ["!@#$%^&*()"]
-
-var charSelect = ['']
-
-var password = ''
-
-//Prompts with criteria
 function generatePassword () {
-  
-var passLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters")
+      // Creation of variables
+      var charSet1 = ["abcdefghijklmnopqrstuvwxyz"]
 
-var upperChoice = confirm("Would you like upper case characters? OK for YES, Cancel for NO")
+      var charSet2 = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
 
-var lowerChoice = confirm("Would you like lower case characters? OK for YES, Cancel for NO")
+      var charSet3 = ["1234567890"]
 
-var numericChoice = confirm("Would you like numeric characters? OK for YES, Cancel for NO")
+      var charSet4 = ["!@#$%^&*()"]
 
-var specialChoice = confirm("Would you like special characters? OK for YES, Cancel for NO")
+      var charSelect = ['']
+
+      var password = ''
+
+      //Prompts with criteria
+      var passLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters")
+
+      var upperChoice = confirm("Would you like upper case characters? OK for YES, Cancel for NO")
+
+      var lowerChoice = confirm("Would you like lower case characters? OK for YES, Cancel for NO")
+
+      var numericChoice = confirm("Would you like numeric characters? OK for YES, Cancel for NO")
+
+      var specialChoice = confirm("Would you like special characters? OK for YES, Cancel for NO")
 
 
-//Taking the criteria decisions and creating the array that my formula will run on
-if (lowerChoice == true) charSelect += charSet1
-if (upperChoice == true) charSelect += charSet2
-if (numericChoice == true) charSelect += charSet3
-if (specialChoice == true) charSelect += charSet4
 
-//creation of 'for' loop that will create our password
+      //Taking the criteria decisions and creating the array that my formula will run on
+      if (lowerChoice == true) charSelect += charSet1
+      if (upperChoice == true) charSelect += charSet2
+      if (numericChoice == true) charSelect += charSet3
+      if (specialChoice == true) charSelect += charSet4
 
-
-
-    for (i=0; i<passLength; i++) {
+      //Formula for looping through the array to create the password
+      for (i=0; i<passLength; i++) {
       var randomChar = parseInt( Math.random() * charSelect.length)
       password += charSelect[randomChar]
     } return password;
