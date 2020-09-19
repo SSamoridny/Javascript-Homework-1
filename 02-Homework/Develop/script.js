@@ -32,9 +32,11 @@ var charSet4 = ["!@#$%^&*()"]
 
 var charSelect = ['']
 
-var result = ''
+var password = ''
 
 //Prompts with criteria
+function generatePassword () {
+  
 var passLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters")
 
 var upperChoice = confirm("Would you like upper case characters? OK for YES, Cancel for NO")
@@ -53,8 +55,11 @@ if (numericChoice == true) charSelect += charSet3
 if (specialChoice == true) charSelect += charSet4
 
 //creation of 'for' loop that will create our password
-for (i=0; i<passLength; i++) {
-  var randomChar = parseInt( Math.random() * charSelect.length)
-  result += charSelect[randomChar]
-}
- 
+
+
+
+    for (i=0; i<passLength; i++) {
+      var randomChar = parseInt( Math.random() * charSelect.length)
+      password += charSelect[randomChar]
+    } return password;
+} 
