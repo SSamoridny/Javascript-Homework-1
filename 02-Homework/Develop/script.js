@@ -2,25 +2,26 @@
 //Prompts with criteria
 //Length between 8 - 128 characters
 //Prompt for lowercase, uppercase, special characters, numeric
-//When all is answered then display in an alert or in the box
+//When all is answered then display in the "Your Secure Password" box
 
 
 // Assignment Code
-//var generateBtn = document.querySelector("#generate");
+var generateBtn = document.querySelector("#generate");
 
 // Write password to the #password input
-//function writePassword() {
-  //var password = generatePassword();
-  //var passwordText = document.querySelector("#password");
+function writePassword() {
+var password = generatePassword();
+var passwordText = document.querySelector("#password");
 
-  //passwordText.value = password;
+  passwordText.value = password;
 
-//}
+}
 
 // Add event listener to generate button
-// generateBtn.addEventListener("click", writePassword);
+generateBtn.addEventListener("click", writePassword);
 
 
+// Creation of variables
 var charSet1 = ["abcdefghijklmnopqrstuvwxyz"]
 
 var charSet2 = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
@@ -29,10 +30,11 @@ var charSet3 = ["1234567890"]
 
 var charSet4 = ["!@#$%^&*()"]
 
-var result = ''
-
 var charSelect = ['']
 
+var result = ''
+
+//Prompts with criteria
 var passLength = prompt("How long would you like your password to be? Choose between 8 and 128 characters")
 
 var upperChoice = confirm("Would you like upper case characters? OK for YES, Cancel for NO")
@@ -43,6 +45,16 @@ var numericChoice = confirm("Would you like numeric characters? OK for YES, Canc
 
 var specialChoice = confirm("Would you like special characters? OK for YES, Cancel for NO")
 
-if ((upperChoice = true) && (lowerChoice = true) && (numericChoice = true) && (specialChoice = true)) {
-  charSelect = charSet1 + charSet2 + charSet3 + charSet4
+
+//Taking the criteria decisions and creating the array that my formula will run on
+if (lowerChoice == true) charSelect += charSet1
+if (upperChoice == true) charSelect += charSet2
+if (numericChoice == true) charSelect += charSet3
+if (specialChoice == true) charSelect += charSet4
+
+//creation of 'for' loop that will create our password
+for (i=0; i<passLength; i++) {
+  var randomChar = parseInt( Math.random() * charSelect.length)
+  result += charSelect[randomChar]
 }
+ 
