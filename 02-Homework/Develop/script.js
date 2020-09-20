@@ -45,17 +45,20 @@ function generatePassword () {
 
       var specialChoice = confirm("Would you like special characters? OK for YES, Cancel for NO")
 
-
+    if (passLength >= 8 && passLength <= 128) {
 
       //Taking the criteria decisions and creating the array that my formula will run on
-      if (lowerChoice == true) charSelect += charSet1
-      if (upperChoice == true) charSelect += charSet2
-      if (numericChoice == true) charSelect += charSet3
-      if (specialChoice == true) charSelect += charSet4
+          if (lowerChoice == true) charSelect += charSet1
+          if (upperChoice == true) charSelect += charSet2
+          if (numericChoice == true) charSelect += charSet3
+          if (specialChoice == true) charSelect += charSet4
 
-      //Formula for looping through the array to create the password
-      for (i=0; i<passLength; i++) {
-      var randomChar = parseInt( Math.random() * charSelect.length)
-      password += charSelect[randomChar]
-    } return password;
+          //Formula for looping through the array to create the password
+          for (i=0; i<passLength; i++) {
+          var randomChar = parseInt( Math.random() * charSelect.length)
+          password += charSelect[randomChar]
+        } return password;
+    } else {
+      alert('Please select a number between 8 - 128. Please click OK and then click Generate Password to try again')
+    }
 } 
