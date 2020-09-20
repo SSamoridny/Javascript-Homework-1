@@ -1,17 +1,93 @@
-# Javascript-Homework-1
+# 03 JavaScript: Password Generator
 
-In this assignment I built the password generator as described. I began with a simple wireframe that laid out what I needed to accomplish in small chunks. 
+## Your Task
 
-- I used prompts and confirms to ask the questions needed to satisfy the assignment requirements and build an array
+This week’s homework requires you to create an application that an employee can use to generate a random password based on criteria they’ve selected by modifying starter code. This app will run in the browser, and will feature dynamically updated HTML and CSS powered by JavaScript code that you write. It will have a clean and polished user interface that is responsive, ensuring that it adapts to multiple screen sizes.
 
-- Next were the variables containing the upper case, lower case, special characters and numbers which would be used to build our final variable
+The password can include special characters. If you’re unfamiliar with these, see this [list of Password Special Characters from the OWASP Foundation](https://www.owasp.org/index.php/Password_special_characters).
 
-- At that point I needed to have boolean comparisons to take the confirm andswers and add the variables as selected into my final array
+## User Story
 
-- Now that this array was built I needed to build the formula for looping through said array randomly which I accomplished
+```
+AS AN employee with access to sensitive data
+I WANT to randomly generate a password that meets certain criteria
+SO THAT I can create a strong password that provides greater security
+```
 
-- At this point I was able to make everything work in the console but I had not properly attached my work using the DOM manipulated items that were given to us which I then figured out. I had to change the name of one variable ('result') and apply it accordingly to match the variable given in the assignment ('password')
+## Acceptance Criteria
 
-- Now I was just about finished but I needed to check against the how many characters parameter in my formula to make sure that either continued to function as it was or request a number between 8 - 128 which I accomplished.
+```
+GIVEN I need a new, secure password
+WHEN I click the button to generate a password
+THEN I am presented with a series of prompts for password criteria
+WHEN prompted for password criteria
+THEN I select which criteria to include in the password
+WHEN prompted for the length of the password
+THEN I choose a length of at least 8 characters and no more than 128 characters
+WHEN prompted for character types to include in the password
+THEN I choose lowercase, uppercase, numeric, and/or special characters
+WHEN I answer each prompt
+THEN my input should be validated and at least one character type should be selected
+WHEN all prompts are answered
+THEN a password is generated that matches the selected criteria
+WHEN the password is generated
+THEN the password is either displayed in an alert or written to the page
+```
 
-At that point the assignment was complete and I was able to hand it in.
+## Mock-Up
+
+The following image shows the web application's appearance and functionality:
+
+![password generator demo](./Assets/03-javascript-homework-demo.png)
+
+## Grading Requirements
+
+This homework is graded based on the following criteria: 
+
+### Technical Acceptance Criteria: 40%
+
+* Satisfies all of the above acceptance criteria plus the following:
+
+  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
+
+### Deployment: 32%
+
+* Application deployed at live URL.
+
+* Application loads with no errors.
+
+* Application GitHub URL submitted.
+
+* GitHub repository that contains application code.
+
+### Application Quality: 15%
+
+* Application user experience is intuitive and easy to navigate.
+
+* Application user interface style is clean and polished.
+
+* Application resembles the mock-up functionality provided in the homework instructions.
+
+### Repository Quality: 13%
+
+* Repository has a unique name.
+
+* Repository follows best practices for file structure and naming conventions.
+
+* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
+
+* Repository contains multiple descriptive commit messages.
+
+* Repository contains quality README file with description, screenshot, and link to deployed application.
+
+
+## Review
+
+You are required to submit the following for review:
+
+* The URL of the deployed application.
+
+* The URL of the GitHub repository. Give the repository a unique name and include a README describing the project.
+
+- - -
+© 2020 Trilogy Education Services, a 2U, Inc. brand. All Rights Reserved.
