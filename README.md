@@ -1,3 +1,5 @@
+![Password Generator](https://user-images.githubusercontent.com/30538162/95387058-75951100-08ad-11eb-94c8-437e70ba95b0.png)
+
 # 03 JavaScript: Password Generator
 
 ## Your Task
